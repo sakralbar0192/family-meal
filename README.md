@@ -1,75 +1,35 @@
-# Nuxt Minimal Starter
+# Family Meal
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Семейное приложение для рецептов. Ближайшая цель — список рецептов, карточка рецепта и CRUD.
 
-## Setup
+## Стек
 
-Make sure to install dependencies:
+Стартуем просто и наращиваем по необходимости:
 
-```bash
-# npm
-npm install
+- **Frontend:** React
+- **Backend:** Node.js
+- **UI:** ориентир — shadcn/ui (кастом под дизайн Focused Editor)
+- **БД:** PostgreSQL (`docker-compose.yaml`)
 
-# pnpm
-pnpm install
+## Продукт (сейчас)
 
-# yarn
-yarn install
+- Список рецептов
+- Просмотр рецепта
+- Создание / редактирование
+- Удаление (с подтверждением)
 
-# bun
-bun install
-```
+Дизайн: Figma, направление **B — Focused Editor** (mobile / tablet / desktop).
 
-## Development Server
+## Локально
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+### База
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+docker compose up -d
 ```
 
-Locally preview production build:
+Нужен `.env` с `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`.
 
-```bash
-# npm
-npm run preview
+### Приложение
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Скрипты `dev` / `build` появятся после bootstrap React + Node.
